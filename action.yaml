@@ -14,19 +14,19 @@ inputs:
   output-file:
     description: 'Optional path to write the diff output.'
     required: false
-  gh_packages_user:
-    description: 'Username for GitHub Packages.'
-    required: true
-  gh_packages_pat:
-    description: 'Personal Access Token (PAT)'
-    required: true
+  # gh_packages_user:
+  #   description: 'Username for GitHub Packages.'
+  #   required: true
+  # gh_packages_pat:
+  #   description: 'Personal Access Token (PAT)'
+  #   required: true
 
 
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'piachsecki/apiprotector-cli:latest'
   env:
-    GH_PACKAGES_USER: ${{ inputs.gh_packages_user }}
-    GH_PACKAGES_PAT: ${{ inputs.gh_packages_pat }}
+    # GH_PACKAGES_USER: ${{ inputs.gh_packages_user }}
+    # GH_PACKAGES_PAT: ${{ inputs.gh_packages_pat }}
     OLD_SPEC_FILE: ${{ inputs.old-spec-file }}
     NEW_SPEC_FILE: ${{ inputs.new-spec-file }}
