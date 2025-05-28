@@ -24,7 +24,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'piachsecki/apiprotector-cli:latest'
+  image: 'docker://piachsecki/apiprotector-cli:latest'
   env:
     # GH_PACKAGES_USER: ${{ inputs.gh_packages_user }}
     # GH_PACKAGES_PAT: ${{ inputs.gh_packages_pat }}
