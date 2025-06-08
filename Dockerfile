@@ -1,1 +1,2 @@
-FROM piachsecki/apiprotector-cli:9633bdb6d87c29e8aa2f63bed5327348d8538f0e
+FROM piachsecki/apiprotector-cli:1fbd74cadf8f88409ac9672a46bcdf4cbddeea62
+
