@@ -14,7 +14,22 @@ inputs:
   output-file:
     description: 'Optional path to write the diff output.'
     required: false
-
+    type: string
+  exit-on-error:
+    description: 'Exit with error code if the OpenAPI changes are not compatible.'
+    required: false
+    type: boolean
+    default: 'false'
+  silent:
+    description: 'Print no output to console.'
+    required: false
+    type: boolean
+    default: 'false'
+  verbose:
+    description: 'Enable verbose output.'
+    required: false
+    type: boolean
+    default: 'false'
 
 runs:
   using: 'docker'
@@ -22,3 +37,7 @@ runs:
   env:
     OLD_SPEC_FILE: ${{ inputs.old-spec-file }}
     NEW_SPEC_FILE: ${{ inputs.new-spec-file }}
+    OUTPUT_FILE: ${{ inputs.output-file }}
+    EXIT_ON_ERROR: ${{ inputs.exit-on-error }}
+    SILENT: ${{ inputs.silent }}
+    VERBOSE: ${{ inputs.verbose }}
